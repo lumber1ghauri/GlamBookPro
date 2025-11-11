@@ -3,7 +3,7 @@ import {useUser} from '@/firebase';
 import {useRouter} from 'next/navigation';
 import {useEffect} from 'react';
 import {Loader} from 'lucide-react';
-import {isUserAdmin} from '@/lib/firebase-admin';
+import {isUserAdmin} from '@/app/actions';
 
 export default function Home() {
   const {user, isUserLoading} = useUser();

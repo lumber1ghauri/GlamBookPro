@@ -2,7 +2,7 @@
 import {ReactNode, useEffect} from 'react';
 import {useRouter} from 'next/navigation';
 import {useUser} from '@/firebase';
-import {isUserAdmin} from '@/lib/firebase-admin';
+import {isUserAdmin} from '@/app/actions';
 import {
   Sidebar,
   SidebarContent,
