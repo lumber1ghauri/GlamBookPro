@@ -1,12 +1,6 @@
 import 'server-only';
-import * as admin from 'firebase-admin';
+import { admin } from '@/lib/firebase-admin-sdk';
 import {Booking} from './types';
-
-if (!admin.apps.length) {
-  admin.initializeApp({
-    credential: admin.credential.applicationDefault(),
-  });
-}
 
 export const getAllBookingsForServer = async (): Promise<Booking[]> => {
   const firestore = admin.firestore();

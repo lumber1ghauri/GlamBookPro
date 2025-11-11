@@ -1,15 +1,9 @@
 'use server';
 
 import 'server-only';
-import * as admin from 'firebase-admin';
+import { admin } from '@/lib/firebase-admin-sdk';
 
 const ADMIN_UID = 'sC8s4rXwP2Z6lJ8f3tH7kY9oV1r2'; // Replace with your actual admin UID
-
-if (!admin.apps.length) {
-  admin.initializeApp({
-    credential: admin.credential.applicationDefault(),
-  });
-}
 
 export const isUserAdmin = async (uid: string): Promise<boolean> => {
   // In a real app, you might check custom claims
